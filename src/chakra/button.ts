@@ -39,5 +39,14 @@ export const Button: ComponentStyleConfig = {
         bg: "gray.50",
       },
     },
+    disabled: {
+      height: "34px",
+      border: "1px solid",
+      borderColor: "gray.200",
+      color: "gray.400",
+      _hover: {
+        cursor: "none",
+      },
+    },
   },
 };
