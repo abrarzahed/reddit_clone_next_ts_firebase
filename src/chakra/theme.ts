@@ -62,7 +62,9 @@ export const theme = extendTheme({
     // heading: "Georgia, serif",
     body: "Open Sans, sans-serif",
   },
-
+  sizes: {
+    container: "1200px",
+  },
   styles: {
     global: () => ({
       body: {
