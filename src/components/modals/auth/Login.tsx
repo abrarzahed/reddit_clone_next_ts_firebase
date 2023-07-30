@@ -1,14 +1,16 @@
 import { authModalState } from "@/atoms/authModalAtom";
 import { auth } from "@/firebase/clientApp";
 import { FIREBASE_ERRORS } from "@/firebase/errors";
-import { Button, Flex, Input, Text } from "@chakra-ui/react";
+import { Button, Flex, Input, Text, useColorMode } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
+import { theme } from "@/chakra/theme";
 
 type LoginProps = {};
 
 const Login: React.FC<LoginProps> = () => {
+  const { colorMode } = useColorMode();
   const setAuthModalState = useSetRecoilState(authModalState);
   // form state
   const [loginForm, setLoginForm] = useState({
@@ -82,7 +84,18 @@ const Login: React.FC<LoginProps> = () => {
           {FIREBASE_ERRORS[userError?.message as keyof typeof FIREBASE_ERRORS]}
         </Text>
       )}
-      <Button w={`100%`} h={`36px`} my={2} type="submit" isLoading={loading}>
+      <Button
+        bg={
+          colorMode === "light"
+            ? theme.colors[colorMode].primary
+            : theme.colors[colorMode].primary
+        }
+        w={`100%`}
+        h={`36px`}
+        my={2}
+        type="submit"
+        isLoading={loading}
+      >
         Log In
       </Button>
       <Flex justifyContent="center" mb={2}>

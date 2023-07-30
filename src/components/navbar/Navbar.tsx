@@ -1,11 +1,15 @@
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex, Image, Icon } from "@chakra-ui/react";
 import SearchInput from "./SearchInput";
 import NavbarRightContent from "./rightContent/NavbarRightContent";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@/firebase/clientApp";
 import NavbarDirectory from "./directory/NavbarDirectory";
+import { useColorMode } from "@chakra-ui/react";
+import { theme } from "@/chakra/theme";
+import { BsSun } from "react-icons/bs";
 
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   const [user, loading, error] = useAuthState(auth);
   // decide what to render
   let content = null;
@@ -14,18 +18,28 @@ const Navbar = () => {
   } else {
     content = (
       <>
-        {user && <NavbarDirectory />}
-        <SearchInput user={user} />
-        <NavbarRightContent user={user} />
+        <Icon
+          fontSize={{ base: "15pt", md: "22px" }}
+          as={BsSun}
+          colorScheme="brand"
+          onClick={toggleColorMode}
+          cursor={`pointer`}
+        >
+          Toggle Theme
+        </Icon>
+        {user && <NavbarDirectory colorMode={colorMode} />}
+        <SearchInput user={user} colorMode={colorMode} />
+        <NavbarRightContent user={user} colorMode={colorMode} />
       </>
     );
   }
   return (
     <Flex
-      bg="white"
+      bg={colorMode === "light" ? "white" : theme.colors.dark.neutral.dark}
       height={`44px`}
       padding={`6px 12px`}
       justify={{ md: `space-between` }}
+      align={`center`}
     >
       <Flex
         align={`center`}
@@ -37,6 +51,7 @@ const Navbar = () => {
           src="/images/redditText.svg"
           height={`46px`}
           display={{ base: "none", md: "unset" }}
+          sx={{ filter: colorMode === "light" ? `invert(0%)` : `invert(100%)` }}
         />
       </Flex>
       {content}

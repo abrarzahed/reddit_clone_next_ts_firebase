@@ -1,9 +1,11 @@
 import { authModalState } from "@/atoms/authModalAtom";
-import { Button } from "@chakra-ui/react";
+import { Button, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import { useSetRecoilState } from "recoil";
+import { theme } from "@/chakra/theme";
 
 const AuthButtons: React.FC = () => {
+  const { colorMode } = useColorMode();
   const setAuthModalState = useSetRecoilState(authModalState);
   return (
     <>
@@ -39,6 +41,11 @@ const AuthButtons: React.FC = () => {
         onClick={() => {
           setAuthModalState({ open: true, view: "signup" });
         }}
+        bg={
+          colorMode === "light"
+            ? theme.colors[colorMode].primary
+            : theme.colors[colorMode].primary
+        }
       >
         Sign Up
       </Button>

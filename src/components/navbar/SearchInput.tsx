@@ -1,13 +1,15 @@
 import { SearchIcon } from "@chakra-ui/icons";
 import { Flex, Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { theme } from "@/chakra/theme";
 import { User } from "firebase/auth";
 import React from "react";
 
 type SearchInputProps = {
   user?: User | null;
+  colorMode?: string;
 };
 
-const SearchInput: React.FC<SearchInputProps> = ({ user }) => {
+const SearchInput: React.FC<SearchInputProps> = ({ user, colorMode }) => {
   return (
     <Flex
       align={`center`}
@@ -24,7 +26,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ user }) => {
           fontSize={`10pt`}
           _placeholder={{ color: "gray.500" }}
           _hover={{
-            bg: "white",
+            bg: colorMode === "light" ? `white` : theme.colors.dark.background,
             border: "1px solid",
             borderColor: "blue.500",
           }}
@@ -34,7 +36,9 @@ const SearchInput: React.FC<SearchInputProps> = ({ user }) => {
             borderColor: "blue.500",
           }}
           height={`34px`}
-          bg={`gray.50`}
+          bg={
+            colorMode === "light" ? `gray.50` : theme.colors.dark.neutral.layer1
+          }
         />
       </InputGroup>
     </Flex>

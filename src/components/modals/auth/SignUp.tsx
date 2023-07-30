@@ -1,12 +1,14 @@
 import { authModalState } from "@/atoms/authModalAtom";
 import { auth } from "@/firebase/clientApp";
 import { FIREBASE_ERRORS } from "@/firebase/errors";
-import { Button, Flex, Input, Text } from "@chakra-ui/react";
+import { Button, Flex, Input, Text, useColorMode } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
+import { theme } from "@/chakra/theme";
 
 const SignUp: React.FC = () => {
+  const { colorMode } = useColorMode();
   const setAuthModalState = useSetRecoilState(authModalState);
   // form state
   const [signUpForm, setSignUpForm] = useState({
@@ -114,7 +116,18 @@ const SignUp: React.FC = () => {
             FIREBASE_ERRORS[userError?.message as keyof typeof FIREBASE_ERRORS]}
         </Text>
       )}
-      <Button w={`100%`} h={`36px`} my={2} type="submit" isLoading={loading}>
+      <Button
+        bg={
+          colorMode === "light"
+            ? theme.colors[colorMode].primary
+            : theme.colors[colorMode].primary
+        }
+        w={`100%`}
+        h={`36px`}
+        my={2}
+        type="submit"
+        isLoading={loading}
+      >
         Sign Up
       </Button>
       <Flex fontSize={`9pt`} justify={`center`}>

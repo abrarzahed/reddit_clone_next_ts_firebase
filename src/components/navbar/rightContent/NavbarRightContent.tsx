@@ -8,6 +8,7 @@ import UserMenu from "./UserMenu";
 
 type RootRightContentProps = {
   user?: User | null;
+  colorMode?: string;
 };
 
 const RootRightContent: React.FC<RootRightContentProps> = ({ user }) => {

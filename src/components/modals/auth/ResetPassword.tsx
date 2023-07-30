@@ -1,17 +1,26 @@
 import React, { useState } from "react";
-import { Button, Flex, Icon, Input, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Icon,
+  Input,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
-import { BsDot, BsReddit } from "react-icons/bs";
+import { BsDot } from "react-icons/bs";
 // import { authModalState, ModalView } from "../../../atoms/authModalAtom";
 import { auth } from "@/firebase/clientApp";
 import { useSetRecoilState } from "recoil";
 import { authModalState } from "@/atoms/authModalAtom";
+import { theme } from "@/chakra/theme";
 
 type ResetPasswordProps = {
   //  toggleView: (view: ModalView) => void;
 };
 
 const ResetPassword: React.FC<ResetPasswordProps> = () => {
+  const { colorMode } = useColorMode();
   const setAuthModalState = useSetRecoilState(authModalState);
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);
@@ -61,6 +70,11 @@ const ResetPassword: React.FC<ResetPasswordProps> = () => {
               {error?.message}
             </Text>
             <Button
+              bg={
+                colorMode === "light"
+                  ? theme.colors[colorMode].primary
+                  : theme.colors[colorMode].primary
+              }
               width="100%"
               height="36px"
               mb={2}

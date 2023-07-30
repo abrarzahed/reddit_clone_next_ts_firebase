@@ -2,23 +2,24 @@ import type { ComponentStyleConfig } from "@chakra-ui/theme";
 
 export const Button: ComponentStyleConfig = {
   baseStyle: {
-    borderRadius: "60px",
-    fontSize: "10pt",
-    fontWeight: 700,
+    borderRadius: "8px",
+
     _focus: {
       boxShadow: "none",
     },
   },
-  sizes: {
-    sm: {
-      fontSize: "8pt",
-    },
-    md: {
-      fontSize: "10pt",
-      // height: "28px",
-    },
-  },
+
   variants: {
+    base: {
+      padding: "16px 40px",
+      color: "#fff",
+    },
+    large: {
+      padding: "16px 40px",
+    },
+    small: {
+      padding: "12px 32px",
+    },
     solid: {
       color: "white",
       bg: "blue.500",
@@ -27,6 +28,7 @@ export const Button: ComponentStyleConfig = {
       },
     },
     outline: {
+      padding: "16px 40px",
       color: "blue.500",
       border: "1px solid",
       borderColor: "blue.500",
@@ -48,5 +50,8 @@ export const Button: ComponentStyleConfig = {
         cursor: "none",
       },
     },
+  },
+  defaultProps: {
+    variant: "base",
   },
 };

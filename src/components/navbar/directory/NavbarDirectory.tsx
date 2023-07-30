@@ -3,8 +3,11 @@ import { Flex, Menu, MenuButton, MenuList, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 import { TiHome } from "react-icons/ti";
 import Communities from "./Communities";
+type NavbarDirectoryProps = {
+  colorMode?: string;
+};
 
-const NavbarDirectory: React.FC = () => {
+const NavbarDirectory: React.FC<NavbarDirectoryProps> = ({ colorMode }) => {
   return (
     <Menu>
       <MenuButton
@@ -23,7 +26,6 @@ const NavbarDirectory: React.FC = () => {
             <Text
               fontSize={`10pt`}
               fontWeight={700}
-              color={`gray.600`}
               display={{ base: "none", lg: "unset" }}
             >
               Home
