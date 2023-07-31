@@ -58,7 +58,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
                   </Text>
                   <Flex>
                     <Icon as={IoSparkles} color={`brand.100`} mr={``} />
-                    <Text color={`gray.400`}>1 Karma</Text>
+                    <Text>1 Karma</Text>
                   </Flex>
                 </Flex>
               </>
@@ -76,7 +76,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
               fontSize={`10pt`}
               fontWeight={700}
               _hover={{
-                bg: "blue.500",
+                bg: "primary",
                 color: "white",
               }}
             >
@@ -104,7 +104,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
               fontSize={`10pt`}
               fontWeight={700}
               _hover={{
-                bg: "blue.500",
+                bg: "primary",
                 color: "white",
               }}
               onClick={() => setAuthModalState({ open: true, view: "login" })}

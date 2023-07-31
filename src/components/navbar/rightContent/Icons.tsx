@@ -28,10 +28,7 @@ const Icons: React.FC = () => {
           padding={1}
           cursor={`pointer`}
           _hover={{
-            bg:
-              colorMode === "light"
-                ? "gray.200"
-                : theme.colors.dark.neutral.layer1,
+            bg: "layer1",
           }}
         >
           <Icon as={BsArrowUpRightCircle} fontSize={20} />
@@ -41,10 +38,7 @@ const Icons: React.FC = () => {
           padding={1}
           cursor={`pointer`}
           _hover={{
-            bg:
-              colorMode === "light"
-                ? "gray.200"
-                : theme.colors.dark.neutral.layer1,
+            bg: "layer1",
           }}
         >
           <Icon as={IoFilterCircleOutline} fontSize={22} />
@@ -54,10 +48,7 @@ const Icons: React.FC = () => {
           padding={1}
           cursor={`pointer`}
           _hover={{
-            bg:
-              colorMode === "light"
-                ? "gray.200"
-                : theme.colors.dark.neutral.layer1,
+            bg: "layer1",
           }}
         >
           <Icon as={IoVideocamOutline} fontSize={22} />
@@ -69,10 +60,7 @@ const Icons: React.FC = () => {
           padding={1}
           cursor={`pointer`}
           _hover={{
-            bg:
-              colorMode === "light"
-                ? "gray.200"
-                : theme.colors.dark.neutral.layer1,
+            bg: "layer1",
           }}
         >
           <Icon as={BsChatDots} fontSize={22} />
@@ -82,10 +70,7 @@ const Icons: React.FC = () => {
           padding={1}
           cursor={`pointer`}
           _hover={{
-            bg:
-              colorMode === "light"
-                ? "gray.200"
-                : theme.colors.dark.neutral.layer1,
+            bg: "layer1",
           }}
         >
           <Icon as={IoNotificationsOutline} fontSize={22} />
@@ -99,10 +84,7 @@ const Icons: React.FC = () => {
           padding={1}
           cursor={`pointer`}
           _hover={{
-            bg:
-              colorMode === "light"
-                ? "gray.200"
-                : theme.colors.dark.neutral.layer1,
+            bg: "layer1",
           }}
         >
           <Icon as={IoMdAdd} fontSize={22} />

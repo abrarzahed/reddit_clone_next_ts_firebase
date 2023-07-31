@@ -1,3 +1,4 @@
+import { Box, Button, HStack, Heading, Text } from "@chakra-ui/react";
 import Head from "next/head";
 
 export default function Home() {
@@ -9,7 +10,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Home</h1>
+      <body>
+        <Box
+          bg={`background`}
+          border={`1px solid`}
+          borderColor={`border`}
+          p={`2rem`}
+        >
+          <Heading as={`h1`}>Home</Heading>
+          <Text>This is a text component</Text>
+          <HStack mt={3}>
+            <Button bg={`complementary`}>Click</Button>
+            <Button bg={`primary`}>Click</Button>
+            <Button bg={`info`}>Click</Button>
+            <Button bg={`warning`}>Click</Button>
+            <Button bg={`success`}>Click</Button>
+            <Button bg={`error`}>Click</Button>
+          </HStack>
+        </Box>
+      </body>
     </>
   );
 }

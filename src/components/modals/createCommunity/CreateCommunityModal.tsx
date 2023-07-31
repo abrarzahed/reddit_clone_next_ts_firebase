@@ -66,7 +66,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
               <Text fontWeight={600} fontSize={15}>
                 Name
               </Text>
-              <Text color={`gray.500`} fontSize={11}>
+              <Text fontSize={11}>
                 Community names including capitalization cannot be changed
               </Text>
               <Text
@@ -74,7 +74,6 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
                 top={`28px`}
                 left={`10px`}
                 width={`20px`}
-                color={`gray.400`}
               >
                 r/
               </Text>
@@ -128,15 +127,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
           </Box>
 
           <ModalFooter>
-            <Button
-              bg={
-                colorMode === "light"
-                  ? theme.colors[colorMode].primary
-                  : theme.colors[colorMode].primary
-              }
-              mr={3}
-              onClick={handleClose}
-            >
+            <Button bg={`primary`} mr={3} onClick={handleClose}>
               {/* <Text variant={`btn`}>Close</Text> */}Close
             </Button>
             <Button variant="ghost">Create Community</Button>

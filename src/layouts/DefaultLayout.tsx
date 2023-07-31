@@ -1,3 +1,4 @@
+"use client";
 import React, { ReactNode } from "react";
 import Navbar from "@/components/navbar/Navbar";
 import { Box } from "@chakra-ui/react";
@@ -13,10 +14,10 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
       <Box
         px={`20px`}
         as="main"
-        bg={colorMode === "light" ? "gray.200" : ""}
+        bg={`background`}
         minHeight={`calc(100vh - 44px)`}
       >
-        <Box mx={`auto`} bg={`red`} maxWidth={`container`}>
+        <Box mx={`auto`} maxWidth={`container`}>
           {children}
         </Box>
       </Box>

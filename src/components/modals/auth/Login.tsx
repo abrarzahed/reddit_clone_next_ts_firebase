@@ -54,7 +54,7 @@ const Login: React.FC<LoginProps> = () => {
           outline: "none",
         }}
         _hover={{
-          bg: "white",
+          bg: "background",
           border: "1px solid",
           borderColor: "blue.500",
         }}
@@ -74,7 +74,7 @@ const Login: React.FC<LoginProps> = () => {
           outline: "none",
         }}
         _hover={{
-          bg: "white",
+          bg: "background",
           border: "1px solid",
           borderColor: "blue.500",
         }}
@@ -85,11 +85,7 @@ const Login: React.FC<LoginProps> = () => {
         </Text>
       )}
       <Button
-        bg={
-          colorMode === "light"
-            ? theme.colors[colorMode].primary
-            : theme.colors[colorMode].primary
-        }
+        bg={"primary"}
         w={`100%`}
         h={`36px`}
         my={2}
@@ -103,8 +99,8 @@ const Login: React.FC<LoginProps> = () => {
           Forgot your password?
         </Text>
         <Text
+          color={`blue.500`}
           fontSize="9pt"
-          color="blue.500"
           cursor="pointer"
           onClick={() =>
             setAuthModalState((prev) => ({

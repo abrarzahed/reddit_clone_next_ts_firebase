@@ -3,7 +3,9 @@ import type { ComponentStyleConfig } from "@chakra-ui/theme";
 export const Button: ComponentStyleConfig = {
   baseStyle: {
     borderRadius: "8px",
-
+    fontSize: "16px",
+    fontWeight: "600",
+    lineHeight: "24px",
     _focus: {
       boxShadow: "none",
     },
@@ -38,7 +40,7 @@ export const Button: ComponentStyleConfig = {
       border: "1px solid",
       borderColor: "gray.300",
       _hover: {
-        bg: "gray.50",
+        bg: "blue.500",
       },
     },
     disabled: {

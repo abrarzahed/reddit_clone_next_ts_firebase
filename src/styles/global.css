@@ -1,0 +1,38 @@
+/* * {
+  border-color: #ced3d9 !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #202c40 !important;
+}
+
+p,
+span {
+  color: #2d3d59 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    border-color: #3a4559 !important;
+    border-color: yellow !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #dadee5 !important;
+    color: red !important;
+  }
+
+  p,
+  span {
+    color: #ced2d9 !important;
+    color: blue !important;
+  }
+} */

@@ -41,11 +41,7 @@ const AuthButtons: React.FC = () => {
         onClick={() => {
           setAuthModalState({ open: true, view: "signup" });
         }}
-        bg={
-          colorMode === "light"
-            ? theme.colors[colorMode].primary
-            : theme.colors[colorMode].primary
-        }
+        bg={`primary`}
       >
         Sign Up
       </Button>

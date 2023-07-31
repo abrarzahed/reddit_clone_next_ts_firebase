@@ -1,9 +1,14 @@
 import { theme } from "@/chakra/theme";
 import DefaultLayout from "@/layouts/DefaultLayout";
-import { ChakraProvider } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  cookieStorageManagerSSR,
+  localStorageManager,
+} from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import { RecoilRoot } from "recoil";
 import { ColorModeScript } from "@chakra-ui/react";
+import "@/styles/global.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

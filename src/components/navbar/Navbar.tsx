@@ -35,7 +35,7 @@ const Navbar = () => {
   }
   return (
     <Flex
-      bg={colorMode === "light" ? "white" : theme.colors.dark.neutral.dark}
+      bg={`base`}
       height={`44px`}
       padding={`6px 12px`}
       justify={{ md: `space-between` }}

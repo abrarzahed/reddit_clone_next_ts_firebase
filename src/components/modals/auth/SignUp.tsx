@@ -65,7 +65,7 @@ const SignUp: React.FC = () => {
           outline: "none",
         }}
         _hover={{
-          bg: "white",
+          bg: "background",
           border: "1px solid",
           borderColor: "blue.500",
         }}
@@ -85,7 +85,7 @@ const SignUp: React.FC = () => {
           outline: "none",
         }}
         _hover={{
-          bg: "white",
+          bg: "background",
           border: "1px solid",
           borderColor: "blue.500",
         }}
@@ -105,7 +105,7 @@ const SignUp: React.FC = () => {
           outline: "none",
         }}
         _hover={{
-          bg: "white",
+          bg: "background",
           border: "1px solid",
           borderColor: "blue.500",
         }}
@@ -117,11 +117,7 @@ const SignUp: React.FC = () => {
         </Text>
       )}
       <Button
-        bg={
-          colorMode === "light"
-            ? theme.colors[colorMode].primary
-            : theme.colors[colorMode].primary
-        }
+        bg={`primary`}
         w={`100%`}
         h={`36px`}
         my={2}

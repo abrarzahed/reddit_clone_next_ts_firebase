@@ -26,7 +26,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ user, colorMode }) => {
           fontSize={`10pt`}
           _placeholder={{ color: "gray.500" }}
           _hover={{
-            bg: colorMode === "light" ? `white` : theme.colors.dark.background,
+            bg: "background",
             border: "1px solid",
             borderColor: "blue.500",
           }}
@@ -36,9 +36,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ user, colorMode }) => {
             borderColor: "blue.500",
           }}
           height={`34px`}
-          bg={
-            colorMode === "light" ? `gray.50` : theme.colors.dark.neutral.layer1
-          }
+          bg={`layer1`}
         />
       </InputGroup>
     </Flex>

@@ -9,6 +9,7 @@ import {
   ModalOverlay,
   Image,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useRecoilState } from "recoil";
@@ -24,6 +25,7 @@ const AuthModal: React.FC = () => {
     setModalState((prev) => ({ ...prev, open: false }));
   };
   const [user, loading, error] = useAuthState(auth);
+  const { colorMode } = useColorMode();
 
   useEffect(() => {
     if (user) {
@@ -50,8 +52,13 @@ const AuthModal: React.FC = () => {
                 src="/images/redditText.svg"
                 height={`46px`}
                 display={{ base: "none", md: "unset" }}
+                sx={{
+                  filter: colorMode === "light" ? `invert(0%)` : `invert(100%)`,
+                }}
               />
             </Flex>
+            <Text mx={2}> - </Text>
+
             <div>
               {modalState.view === "login" && "Login"}
               {modalState.view === "signup" && "Sign Up"}
@@ -74,9 +81,7 @@ const AuthModal: React.FC = () => {
             >
               <OAuthButtons />
               {modalState.view !== "resetPassword" && (
-                <Text color={`gray.500`} fontWeight={700}>
-                  OR
-                </Text>
+                <Text fontWeight={700}>OR</Text>
               )}
 
               <AuthInputs />

@@ -54,27 +54,22 @@ const ResetPassword: React.FC<ResetPasswordProps> = () => {
               fontSize="10pt"
               _placeholder={{ color: "gray.500" }}
               _hover={{
-                bg: "white",
+                bg: "background",
                 border: "1px solid",
                 borderColor: "blue.500",
               }}
               _focus={{
                 outline: "none",
-                bg: "white",
+                bg: "background",
                 border: "1px solid",
                 borderColor: "blue.500",
               }}
-              bg="gray.50"
             />
             <Text textAlign="center" fontSize="10pt" color="red">
               {error?.message}
             </Text>
             <Button
-              bg={
-                colorMode === "light"
-                  ? theme.colors[colorMode].primary
-                  : theme.colors[colorMode].primary
-              }
+              bg={`primary`}
               width="100%"
               height="36px"
               mb={2}
