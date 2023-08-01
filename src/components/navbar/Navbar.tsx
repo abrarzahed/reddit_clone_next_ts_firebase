@@ -1,3 +1,4 @@
+"use client";
 import { Flex, Image, Icon } from "@chakra-ui/react";
 import SearchInput from "./SearchInput";
 import NavbarRightContent from "./rightContent/NavbarRightContent";

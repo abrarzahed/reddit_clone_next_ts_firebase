@@ -1,8 +1,8 @@
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
-import "@fontsource/open-sans/300.css";
-import "@fontsource/open-sans/400.css";
-import "@fontsource/open-sans/700.css";
+// import "@fontsource/Poppins/300.css";
+// import "@fontsource/Poppins/400.css";
+// import "@fontsource/Poppins/700.css";
 import { Button } from "./button";
 import { Heading } from "./heading";
 import { Text } from "./text";
@@ -90,7 +90,7 @@ export const theme = extendTheme({
     body: "Poppins, sans-serif",
   },
   sizes: {
-    container: "1200px",
+    containerWidth: "1200px",
   },
   styles: {
     global: (props: Record<string, any>) => ({

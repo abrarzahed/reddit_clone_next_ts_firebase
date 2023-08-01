@@ -6,9 +6,6 @@ export const Button: ComponentStyleConfig = {
     fontSize: "16px",
     fontWeight: "600",
     lineHeight: "24px",
-    _focus: {
-      boxShadow: "none",
-    },
   },
 
   variants: {
@@ -21,6 +18,31 @@ export const Button: ComponentStyleConfig = {
     },
     small: {
       padding: "12px 32px",
+    },
+    smallWhiteBg: {
+      padding: "12px 32px",
+      color: "primary",
+      bg: "white",
+    },
+    smallPrimaryBg: {
+      padding: "12px 32px",
+      color: "white",
+      bg: "primary",
+    },
+
+    serviceCard: {
+      borderRadius: "8px",
+      maxWidth: "380px",
+      minWidth: "260px",
+      bg: "layer1",
+      padding: "32px",
+    },
+    postCard: {
+      borderRadius: "8px",
+      maxWidth: "380px",
+      minWidth: "260px",
+      bg: "layer1",
+      padding: "32px",
     },
     solid: {
       color: "white",

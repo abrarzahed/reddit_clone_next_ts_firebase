@@ -1,7 +1,16 @@
-import { Box, Button, HStack, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  HStack,
+  Heading,
+  Text,
+  Wrap,
+  useColorMode,
+} from "@chakra-ui/react";
 import Head from "next/head";
 
 export default function Home() {
+  const { colorMode } = useColorMode();
   return (
     <>
       <Head>
@@ -12,21 +21,36 @@ export default function Home() {
       </Head>
       <body>
         <Box
-          bg={`background`}
+          bg={`layer2`}
           border={`1px solid`}
           borderColor={`border`}
           p={`2rem`}
         >
-          <Heading as={`h1`}>Home</Heading>
-          <Text>This is a text component</Text>
-          <HStack mt={3}>
+          <Heading as={`h1`} variant={{ base: "heading3", lg: "heading1" }}>
+            Stand Out in the Digital Crowd with Creative Solutions
+          </Heading>
+          <Text>
+            We are a leading creative agency. Bringing your ideas to life and
+            help your brand thrive in the digital world.
+          </Text>
+          <Wrap mt={3}>
             <Button bg={`complementary`}>Click</Button>
             <Button bg={`primary`}>Click</Button>
             <Button bg={`info`}>Click</Button>
             <Button bg={`warning`}>Click</Button>
             <Button bg={`success`}>Click</Button>
             <Button bg={`error`}>Click</Button>
-          </HStack>
+            <Button
+              variant={
+                colorMode === "light" ? `smallWhiteBg` : "smallPrimaryBg"
+              }
+            >
+              Click
+            </Button>
+          </Wrap>
+          <Box mt={3}>
+            <Button variant={"serviceCard"}>This is a simple card</Button>
+          </Box>
         </Box>
       </body>
     </>

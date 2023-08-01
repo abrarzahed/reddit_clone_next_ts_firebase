@@ -17,7 +17,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
         bg={`background`}
         minHeight={`calc(100vh - 44px)`}
       >
-        <Box mx={`auto`} maxWidth={`container`}>
+        <Box mx={`auto`} maxWidth={`containerWidth`}>
           {children}
         </Box>
       </Box>
