@@ -30,20 +30,6 @@ export const Button: ComponentStyleConfig = {
       bg: "primary",
     },
 
-    serviceCard: {
-      borderRadius: "8px",
-      maxWidth: "380px",
-      minWidth: "260px",
-      bg: "layer1",
-      padding: "32px",
-    },
-    postCard: {
-      borderRadius: "8px",
-      maxWidth: "380px",
-      minWidth: "260px",
-      bg: "layer1",
-      padding: "32px",
-    },
     solid: {
       color: "white",
       bg: "blue.500",
